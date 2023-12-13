@@ -1,0 +1,199 @@
+
+.user-info {
+    display: flex;
+    padding: 10px;
+    box-shadow: 2px 0 0 @shadow;
+}
+
+.container-bar {
+    padding: 15px;
+}
+.default-container {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: @containerBg;
+    box-shadow: 0 3px 8px 2px @containerShadow;
+}
+.container-bar {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    box-shadow: 0 2px 5px @shadow;
+}
+
+
+// 表格操作栏
+.table-ctrls, .table-ctrls-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: -15px;
+        right: -15px;
+        display: block;
+        height: 1px;
+        background-color: #f2f3f3;
+    }
+    &.table-ctrls-wrap {
+      flex-wrap: wrap;
+    }
+    .tabel-ctrl {
+        margin-left: 30px;
+    }
+}
+.table-title {
+    flex: 1;
+    width: 80px;
+    margin-right: 10px;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.table-ctrl-tabs {
+    flex: 1;
+    width: 80px;
+    display: flex;
+    align-items: center;
+}
+.table-ctrl-tab {
+    position: relative;
+    padding: 20px;
+    color: #333;
+    cursor: pointer;
+    &.active,
+    &:hover {
+        color: @primary;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 90%;
+            height: 2px;
+            margin: 0 auto;
+            background-color: @primary;
+        }
+    }
+}
+.table-ctrl {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+
+// 表格样式
+.el-table {
+    margin-top: 15px;
+    .warning-row {
+        background-color: @tableWarning;
+    }
+    .thumb-img {
+        width: 40px;
+    }
+}
+.td-title {
+    font-size: 18px;
+}
+.td-content {
+    height: 3.6em;
+    & > .tip {
+        margin: 5px 0;
+        line-height: 1.4;
+    }
+}
+// 分页
+.pagination {
+    margin-top: 20px;
+}
+
+// 表单样式
+.el-input,
+.el-textarea {
+  max-width: 920px;  //限制表单文本框宽度
+}
+.form-tips {
+  font-size: 12px;
+  color: #999;
+}
+.rate-input {
+  position: relative;
+}
+.rate-input:after {
+  // content: '%';  //暂时去掉，因为还没去处理百分比。用在分润模块哈
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+// 有前后内容的文本框
+.form-with-ctrl {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-with-ctrl:first-child {
+  margin-top: 0;
+}
+.form-with-ctrl-content .el-input__inner,
+.form-with-ctrl-content.el-date-editor {
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+.form-with-ctrl-ctrl{
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 40px;
+  white-space: nowrap;
+  background-color: #f2f3f3;
+}
+
+
+
+// 列表板块
+.list-container {
+    border-radius: 5px;
+    background-color: @containerBg;
+    box-shadow: 0 3px 8px 2px @containerShadow;
+}
+.table-thumb {
+  width: 50px;
+}
+
+//不同颜色操作按钮
+.warning-color,
+.warning-color:hover,
+.warning-color:focus {
+  color: #e6a23c;
+}
+.error-color,
+.error-color:hover,
+.error-color:focus {
+  color: #f56c6c;
+}
+.success-color,
+.success-color:hover,
+.success-color:focus {
+  color: #67c23a;
+}
+.primary-color,
+.primary-color:hover,
+.primary-color:focus {
+  color: #618df5;
+}
+
+
+// 富文本框
+@import './quill-editor.less';
+.quill-editor {
+    line-height: normal;
+}

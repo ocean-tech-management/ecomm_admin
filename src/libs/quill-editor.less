@@ -1,0 +1,8 @@
+&.ql-size{
+  .ql-picker-label,
+  .ql-picker-item{
+      &::before{
+          content: attr(data-value) !important; //以他们自身的字号大小作为显示文字
+      }
+  }
+}

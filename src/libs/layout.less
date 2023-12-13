@@ -1,0 +1,271 @@
+@import './theme.less';
+// 特殊样式在最底部按顺序引入
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: @containerBg;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.4;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: @mainFontColor;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.tip {
+  font-size: 12px;
+  color: @mainTipsColor;
+}
+
+.wrapper-container {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.el-container.page-content {
+  min-width: 1200px;
+}
+
+.el-header {
+  display: flex;
+  align-items: center;
+  color: @headerColor;
+  background-color: @headerBg;
+}
+
+.app-info {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.app-name {
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+.header-contain {
+  flex: 1;
+  width: 80px;
+  margin-left: 40px;
+  font-size: 24px;
+}
+.header-navs {
+  display: flex;
+}
+.header-nav {
+  display: block;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 60px;
+  color: #fff;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  &:hover,
+  &.active {
+    background-color: rgba(0,0,0,.2);
+  }
+}
+
+
+
+.login-user-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255,255,255,.1);
+  }
+  .user-name {
+    max-width: 150px;
+    font-size: 16px;
+    margin-left: 15px;
+  }
+}
+.login-user-ctrl {
+  position: relative;
+}
+
+
+.avator {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.menu-aside {
+  width: 200px;
+  transition: .3s width linear;
+  background-color: @mainColor;
+
+  &.mini {
+    width: 64px !important;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.page-menu {
+  height: 100%;
+  border-right: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+
+// 面包屑
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 20px;
+  background-color: @breadcrumbBg;
+}
+
+.breadcrumb::before {
+  content: '';
+  width: 4px;
+  height: 1.2em;
+  margin-right: 10px;
+  background-color: @breadcrumbTagBg;
+}
+
+
+// 字体
+.title {
+  font-size: 20px;
+}
+
+
+
+
+// 默认按钮
+.primary-btn {
+  background-color: @primary;
+  border-color: @primary;
+  color: #fff;
+
+  &:hover,
+  &:active {
+
+    background-color: @primary;
+  }
+}
+
+.secondry-btn {
+  background-color: @secondry;
+  border-color: @secondry;
+  color: #fff;
+
+  &:hover,
+  &:active {
+
+    background-color: @secondry;
+  }
+}
+
+.btn-block {
+  width: 100%;
+}
+
+
+
+// 页面样式
+.main {
+  display: flex;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: @pageBg;
+  overflow-x: auto;
+}
+.page {
+  flex: 1;
+  position: relative;
+  box-sizing: border-box;
+  background-color: @pageBg;
+  overflow-x: auto;
+}
+
+.container-box {
+  width: @pageWidth;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: @containerBg;
+}
+.subpage-content {
+  padding: 25px;
+}
+.subpage-content-ctrls {
+  padding-bottom: 0;
+}
+
+
+// 页脚
+.page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: @subFontColor;
+}
+
+
+// 登录
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  width: 320px;
+  padding: 25px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px @shadow;
+}
+
+// 列表最多显示6行 2023/3/30改，原为5行
+.el-table .cell {
+  display: -webkit-box;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+}
+
+
+// 特殊样式在此引入
+@import "plugin.less";
+@import "special.less";

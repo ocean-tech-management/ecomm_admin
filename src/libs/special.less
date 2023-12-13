@@ -1,0 +1,109 @@
+@import "../assets/css/index.less";
+
+
+.thumbnail-uploader {
+  line-height: 0;
+}
+
+.thumbnail-uploader .el-upload .el-icon-plus {
+  border: 1px dashed #000;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbnail-uploader .el-upload:hover {
+  border-color: #409eff;
+}
+
+.thumbnail-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+
+.thumbnail {
+  width: 178px;
+  display: block;
+}
+
+.video-upload-box {
+  position: relative;
+  width: 178px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.4;
+  color: #999;
+}
+.video-upload-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.video-upload-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.video-upload-tips {
+  width: 130px;
+}
+.video-uploading-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: rgba(0,0,0,.7);
+  z-index: 1;
+  .el-progress__text {
+    color: #fff;
+  }
+}
+
+
+// 表单
+.form-content-static {
+  color: #8c939d;
+}
+
+
+  // 订单标记用旗子
+  i.red {
+    color: #f00;
+  }
+  i.yellow {
+    color: #ff0;
+  }
+  i.green {
+    color: #0f0;
+  }
+  i.blue {
+    color: #00f;
+  }
+  i.purple {
+    color: #f0f;
+  }
